@@ -1,0 +1,125 @@
+@font-face {
+    font-family: my-font;
+    src: url("font.woff")format('woff');
+}
+
+@media (max-width: 768px) {
+    .content {
+        position: relative;
+        text-align: center;
+        width: 15em;
+        height: 5em;
+        left: 50%;
+        top: 50%;
+        margin-left: -7.5em;
+        margin-top: -2.5em;
+        animation: appearing 0.7s;
+        animation-fill-mode: forwards;
+    }
+    .matrix {
+        display: block;
+        height: 100%;
+    }
+}
+
+@media (min-width: 768px) {
+    .content {
+        position: relative;
+        text-align: center;
+        width: 30em;
+        height: 5em;
+        left: 50%;
+        top: 50%;
+        margin-left: -15em;
+        margin-top: -2.5em;
+        animation: appearing 0.7s;
+        animation-fill-mode: forwards;
+    }
+    .matrix {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        height: 100%;
+    }
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    font-family: my-font,serif;
+}
+html {
+    width: 99%;
+    height: 99%;
+}
+
+.personal-information {
+    font-size: 2em;
+    width: 100%;
+    height: 100%;
+    background-color: #7673ff;
+    color: #FFF;
+}
+.personal-information::before {
+    font-size: 0.5em;
+    content: 'Introduction';
+    margin-left: 2em;
+    position: relative;
+    top: 0.5em;
+}
+
+.education {
+    height: 100%;
+    color: #FFF;
+    background-color: #007bffa6;
+}
+.education::before {
+    content: 'Education';
+    margin-left: 2em;
+    position: relative;
+    top: 0.5em;
+}
+
+.interests {
+    height: 100%;
+    color: #666;
+    background-color: #c4ffdcd1;
+}
+.interests::before {
+    content: 'My Interests';
+    margin-left: 2em;
+    position: relative;
+    top: 0.5em;
+}
+
+.working-experience {
+    height: 100%;
+    background-color: #a2f6fb8f;
+    color: #666;
+}
+.working-experience::before {
+    content: 'Working Experience';
+    margin-left: 2em;
+    position: relative;
+    top: 0.5em;
+}
+
+.contact-information {
+    height: 100%;
+    color: #FFF;
+    background-color: #ff6666d1;
+}
+.contact-information::before {
+    content: 'Contact Information';
+    margin-left: 2em;
+    position: relative;
+    top: 0.5em;
+}
+
+@keyframes appearing {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
